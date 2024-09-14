@@ -27,4 +27,9 @@ Run our proposed method by:
                 python .main.py
 
 # Test
-                python ./
+1.We provide pre-trained models. You can download from here:https://pan.baidu.com/s/1Q7jFT2E7yk_uxrMQgxqTfg?pwd=njc1 .code:njc1.
+
+2.Place the weight file according to the path specified in back_bone.py.
+
+3.Run:
+./
