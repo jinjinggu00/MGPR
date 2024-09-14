@@ -13,11 +13,11 @@ tqdm = 4.65.0
 torchvision = 0.11.0
 
 # Preprocess
-## 1.Extracting the optial flows by:
+1.Extracting the optial flows by:
 
                 python ./preprocess/flows.py
 
-## 2.Convert the optical flow files in numpy format to RGB images by(You may need to rectify the dataset path in numpy_to_flow_img.py):
+2.Convert the optical flow files in numpy format to RGB images by(You may need to rectify the dataset path in numpy_to_flow_img.py):
 
                 python ./preprocess/numpy_to_flow_img.py
 
