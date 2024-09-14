@@ -166,10 +166,10 @@ for epoch in range(args.epochs):
 
 
         if args.method == 'pred':
-            outputs, att_weight, _, _, m_items, softmax_score_query, softmax_score_memory, separateness_loss, compactness_loss = model.forward(imgs[:,0:12], m_items, True)
+            outputs, att_weight, _, _, m_items, softmax_score_query, softmax_score_memory, _, compactness_loss = model.forward(imgs[:,0:12], m_items, True)
             #print(outputs.shape)
         else:
-            outputs, att_weight, _, _, m_items, softmax_score_query, softmax_score_memory, separateness_loss, compactness_loss = model.forward(imgs, m_items, True)
+            outputs, att_weight, _, _, m_items, softmax_score_query, softmax_score_memory, _, compactness_loss = model.forward(imgs, m_items, True)
 
         optimizer.zero_grad()
         mem3_loss = torch.mean(torch.sum(att_weight * torch.log(att_weight + 1e-12), dim=1))
@@ -189,14 +189,11 @@ for epoch in range(args.epochs):
     print('----------------------------------------')
     print('Epoch:', epoch + 1)
     if args.method == 'pred':
-        print('Loss: Prediction {:.6f}/ Compactness {:.6f}/ Separateness {:.6f}/ SSIM_Loss {:.6f}'.format(loss_pixel.item(),
+        print('Loss: Prediction {:.6f}/ Compactness {:.6f}/ SSIM_Loss {:.6f}'.format(loss_pixel.item(),
                                                                                         compactness_loss.item(),
-                                                                                        separateness_loss.item(),
                                                                                         ssim_val.item()))
     else:
-        print('Loss: Reconstruction {:.6f}/ Compactness {:.6f}/ Separateness {:.6f}'.format(loss_pixel.item(),
-                                                                                            compactness_loss.item(),
-                                                                                            separateness_loss.item()))
+        print('Loss: Reconstruction {:.6f}/ Compactness {:.6f}.format(loss_pixel.item(), compactness_loss.item()))
     print('Memory_items:')
     print(m_items)
     print('----------------------------------------')
