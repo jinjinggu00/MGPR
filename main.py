@@ -180,7 +180,7 @@ for epoch in range(args.epochs):
         else:
             loss_pixel = torch.mean(loss_func_mse(outputs, imgs))
 
-        loss = loss_pixel + args.loss_compact * compactness_loss + args.loss_separate * separateness_loss + mem3_loss + ssim_val
+        loss = loss_pixel + args.loss_compact * compactness_loss  + mem3_loss + ssim_val
         loss.backward(retain_graph=True)
         optimizer.step()
 
