@@ -32,4 +32,5 @@ Run our proposed method by:
 2.Place the weight file according to the path specified in back_bone.py.
 
 3.Run:
-                python ./eval/eva_2.py
+
+    python ./eval/eva_2.py
