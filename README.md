@@ -15,16 +15,16 @@ torchvision = 0.11.0
 # Preprocess
 1.Extracting the optial flows by:
 
-                python ./preprocess/flows.py
+    python ./preprocess/flows.py
 
 2.Convert the optical flow files in numpy format to RGB images by(You may need to rectify the dataset path in numpy_to_flow_img.py):
 
-                python ./preprocess/numpy_to_flow_img.py
+    python ./preprocess/numpy_to_flow_img.py
 
 # Train
 Run our proposed method by:
 
-                python .main.py
+    python .main.py
 
 # Test
 1.We provide pre-trained models. You can download from here:https://pan.baidu.com/s/1Q7jFT2E7yk_uxrMQgxqTfg?pwd=njc1 .code:njc1.
