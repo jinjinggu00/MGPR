@@ -15,4 +15,4 @@ torchvision = 0.11.0
 # RUN
 Run our proposed method by:
 
-  ./model/main.py
+    ./model/main.py
